@@ -7,7 +7,6 @@ import { ExtensionsDiscovery } from './extensions/ExtensionsDiscovery'
 import { FeedbackSubmissionsDiscovery } from './feedback_submissions/FeedbackSubmissionsDiscovery'
 import { ImportsDiscovery } from './imports/ImportsDiscovery'
 import { LineItemsDiscovery } from './line_items/LineItemsDiscovery'
-import { ListsDiscovery } from './lists/ListsDiscovery'
 import { ObjectsDiscovery } from './objects/ObjectsDiscovery'
 import { OwnersDiscovery } from './owners/OwnersDiscovery'
 import { PipelinesDiscovery } from './pipelines/PipelinesDiscovery'
@@ -36,7 +35,6 @@ export class CrmDiscovery {
   public schemas: SchemasDiscovery
   public tickets: TicketsDiscovery
   public timeline: TimelineDiscovery
-  public lists: ListsDiscovery
 
   constructor(config: IConfiguration = {}) {
     this.associations = new AssociationsDiscovery(config)
@@ -56,6 +54,5 @@ export class CrmDiscovery {
     this.schemas = new SchemasDiscovery(config)
     this.tickets = new TicketsDiscovery(config)
     this.timeline = new TimelineDiscovery(config)
-    this.lists = new ListsDiscovery(config)
   }
 }
